@@ -118,6 +118,8 @@ double a2[param->nOutput];  // Net output of output layer [param->nOutput]
 
 double s1[param->nHide];    // Output delta from input layer to the hidden layer [param->nHide]
 double s2[param->nOutput];  // Output delta from hidden layer to the output layer [param->nOutput]
+
+	for (int t = 0; t < epochs; t++) {
 int countPotenIH=0;
 int countDepIH=0;
 int countPotenHO=0;
@@ -126,7 +128,6 @@ int counttotalPotenIH=0;
 int counttotalDepIH=0;
 int counttotalPotenHO=0;
 int counttotalDepHO=0;
-	for (int t = 0; t < epochs; t++) {
 		for (int batchSize = 0; batchSize < numTrain; batchSize++) {
 		
 			int i = rand() % param->numMnistTrainImages;  // Randomize sample
